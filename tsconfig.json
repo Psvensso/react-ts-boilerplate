@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "outDir": "./dist",
+    "jsx": "react",
+    "module": "es6", //es6 is default
+    "preserveConstEnums": true,
+    "sourceMap": true,
+    "target": "es6",
+    "noEmitOnError": true,
+    "experimentalDecorators": true
+  },
+  "exclude": [
+    "node_modules",
+    "dist"
+  ]
+}
