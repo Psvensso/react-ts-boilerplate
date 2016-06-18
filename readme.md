@@ -8,6 +8,10 @@ Just contains bare minimums:
 - SASS-loader
 - typescript 1.9 > 
 
+### A note on TypeScript 1.6
+There is a bug in current 1.9 branch.  https://github.com/TypeStrong/ts-loader/issues/227
+Included a typescript.js (replace with your tyopescript.js file). Or if the problem is fixed in your TS version... good for you :) )
+
 ## Dev Install
 Project is using Typescript 1.9 > 
 This means that the project uses its own TypeScript compiler (node tsc). Make sure your IDE is up for the task with 
