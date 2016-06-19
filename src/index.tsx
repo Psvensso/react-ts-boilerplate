@@ -1,5 +1,5 @@
 import * as React from "react";
 import {render} from "react-dom";
+import {AppContainer} from "./components/appContainer";
 
-var container = document.getElementById("app-container");
-render(<div>Hello </div>, container);
+render(React.createElement(AppContainer, {}), document.getElementById("app-container"));

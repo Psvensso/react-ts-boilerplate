@@ -1,14 +1,15 @@
-var webpack = require('webpack');
+var webpack = require("webpack");
 var path = require("path");
 module.exports = {
-    devtool: 'cheap-module-eval-source-map',
+    debug: true,
+    devtool: 'eval',
     entry: [
-        'webpack-hot-middleware/client?reload=true', //note that it reloads the page if hot module reloading fails.
-        "./src/index"
+        'webpack-hot-middleware/client',
+        './src/index.tsx'
     ],
     target: 'web',
     output: {
-        path: path.resolve("./"),
+        path: path.join(__dirname, 'dist'),
         publicPath: "/",
         filename: 'dist/bundle.js'
     },
@@ -23,12 +24,10 @@ module.exports = {
         loaders: [
             {
                 test: /\.scss$/,
-                //loaders: ['react-hot', "style", "css?sourceMap", "sass?sourceMap&outputStyle=expanded"]
                 loaders: ["style-loader", "css-loader", "resolve-url", "sass?sourceComments"]
             },
             {
                 test: /\.json/,
-                //loaders: ['react-hot', "style", "css?sourceMap", "sass?sourceMap&outputStyle=expanded"]
                 loaders: ["json-loader"]
             },
             {
@@ -59,23 +58,16 @@ module.exports = {
         ]
     },
     resolve: {
+        root: [path.resolve('./src')],
         extensions: ['', '.ts', '.tsx', '.js'],
-        modulesDirectories: ["node_modules"],
-        alias: {
-
-        }
+        modulesDirectories: ["node_modules"]
     },
     externals: {
-        //"react": "React",
-        //"react-dom": "ReactDOM",
-        //"react-bootstrap": "ReactBootstrap",
-        //"react-router": "ReactRouter"
+
     },
 
     plugins: [
         new webpack.HotModuleReplacementPlugin(),
         new webpack.NoErrorsPlugin()
-        //new webpack.optimize.UglifyJsPlugin({ minimize: true, compress: { warnings: false } }),
-        //new webpack.HotModuleReplacementPlugin()
     ]
-}
+};
