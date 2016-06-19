@@ -1,6 +1,5 @@
 Small boilerplate repo to get kickstarted with React and TypeScript.
-Just contains bare minimums: 
-
+Contains only the bare minimum: 
 - Webpack
 - AVA (unit tests)
 - ts-loader
@@ -9,8 +8,9 @@ Just contains bare minimums:
 - typescript 1.9 > 
 
 ### A note on TypeScript 1.6
-There is a bug in current 1.9 branch.  https://github.com/TypeStrong/ts-loader/issues/227
-Included a typescript.js (replace with your tyopescript.js file). Or if the problem is fixed in your TS version... good for you :) )
+There is a bug in current 1.9 @next branch.  https://github.com/TypeStrong/ts-loader/issues/227
+Included a typescript.js (replace with your node_moules>typescript.js file). 
+Or if the problem is fixed in your TS version... good for you :) )
 
 ## Dev Install
 Project is using Typescript 1.9 > 
