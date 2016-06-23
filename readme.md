@@ -7,7 +7,7 @@ Contains only the bare minimum:
 - SASS-loader
 - typescript 1.9 > 
 
-### A note on TypeScript 1.6
+### A note on TypeScript 1.9
 There is a bug in current 1.9 @next branch.  https://github.com/TypeStrong/ts-loader/issues/227
 Included a typescript.js (replace with your node_moules>typescript.js file). 
 Or if the problem is fixed in your TS version... good for you :) )
